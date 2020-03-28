@@ -4,8 +4,14 @@ with open('reviews.txt','r') as f: #打開reviews.txt 並命名為f:
 	for line in f: #將f:檔案裡面的每一行
 		data.append(line) #加入data清單中
 		count += 1 #count=count+1
-		if count % 1000 == 0 : #只要count 除以1000餘數是0
+		if count % 10000 == 0 : #只要count 除以10000餘數是0
 				print(len(data)) #列印出data清單的每一筆(會一筆一筆印)
 print(len(data)) #印出data的總資料長度
+print(data[10])#印出data清單中的索引為10的資料
 
-print (data[0]) #印出data清單中的索引為0的資料
+print ('檔案讀取完畢,總共有',len(data),'筆資料') # 
+
+sun_len = 0
+for d in data:  #將data清單中每一筆留言d
+	sun_len = sum_len + len(d) #把每一筆留言的長度都加回去上一筆 
+print('留言的平均長度為',sum_len/len(data))
