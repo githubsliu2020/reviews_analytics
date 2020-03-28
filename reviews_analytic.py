@@ -11,9 +11,9 @@ print(data[10])#印出data清單中的索引為10的資料
 
 print ('檔案讀取完畢,總共有',len(data),'筆資料') # 
 
-sun_len = 0
+sum_len = 0
 for d in data:  #將data清單中每一筆留言d
-	sun_len = sum_len + len(d) #把每一筆留言的長度都加回去上一筆 
+	sum_len = sum_len + len(d) #把每一筆留言的長度都加回去上一筆 
 print('留言的平均長度為',sum_len/len(data))
 
 new =[] #建立new清單
