@@ -15,3 +15,11 @@ sun_len = 0
 for d in data:  #將data清單中每一筆留言d
 	sun_len = sum_len + len(d) #把每一筆留言的長度都加回去上一筆 
 print('留言的平均長度為',sum_len/len(data))
+
+new =[] #建立new清單
+for d in data: #將data中的每一筆留言d
+	if len(d) < 100: #把每一個d留言長度大於100的
+		new.append(d) #加進去new清單
+print('一共有', len(new), '筆留言長長度小於100')
+print(new[0]) #印出new清單中索引0的留言
+
