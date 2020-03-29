@@ -23,3 +23,10 @@ for d in data: #將data中的每一筆留言d
 print('一共有', len(new), '筆留言長長度小於100')
 print(new[0]) #印出new清單中索引0的留言
 
+good = [] #建立good清單
+for d in data:
+	if 'good' in d:   #如果在留言裡面有提到'good' 快寫法 good = [d for d in data if 'good' in d]
+		good.append(d)
+print('一共有',len(good),'筆留言提到good')
+print(good[0])
+
