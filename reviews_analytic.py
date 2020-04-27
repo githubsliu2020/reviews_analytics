@@ -1,3 +1,5 @@
+import time #導入計時模組
+
 data= []   #建立data清單
 count = 0
 with open('reviews.txt','r') as f: #打開reviews.txt 並命名為f:
@@ -14,6 +16,7 @@ print ('檔案讀取完畢,總共有',len(data),'筆資料') #
 print(data[0])
 
 #文字計數S
+start_time = time.time() #把系統當時的時間記錄,使用time模組的time function
 wc = {}
 for d in data:    #d 是單留言 data是整筆留言清單
 	words = d.split(' ')  #把每個字串用空白分開
@@ -25,6 +28,9 @@ for d in data:    #d 是單留言 data是整筆留言清單
 for word in wc:
 	if wc[word] > 100000:   #如果重複的字詞出現超過100000次
 		print(word, wc[word])
+end_time = time.time()
+print ('花了', end_time - start_time,'seconds' )
+
 print(len(wc))
 # #print(wc['Allen'])
 
